@@ -16,7 +16,7 @@ action "checkout pull request" {
 
 action "conform" {
   needs   = "checkout pull request"
-  uses    = "docker://andrewrynhard/conform:6f73b02"
+  uses    = "docker://andrewrynhard/conform:4447684-dirty"
 
   secrets = [
     "GITHUB_TOKEN"
