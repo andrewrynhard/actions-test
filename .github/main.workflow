@@ -1,4 +1,4 @@
-workflow "on push, run conform" {
+workflow "Conform Pull Request" {
   on       = "pull_request"
 
   resolves = [
@@ -7,9 +7,10 @@ workflow "on push, run conform" {
 }
 
 action "conform" {
-  uses    = "docker://andrewrynhard/conform:4447684-dirty"
+  uses    = "docker://autonomy/conform:v0.1.0-alpha.16"
 
   secrets = [
     "GITHUB_TOKEN"
   ]
 }
+
